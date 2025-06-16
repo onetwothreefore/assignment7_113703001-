@@ -1,0 +1,3 @@
+/home1/student/stud113/s11301/assign6/build/CMakeFiles/exec.dir
+/home1/student/stud113/s11301/assign6/build/CMakeFiles/edit_cache.dir
+/home1/student/stud113/s11301/assign6/build/CMakeFiles/rebuild_cache.dir
