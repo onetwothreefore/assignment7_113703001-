@@ -1,64 +1,24 @@
-# 2025 OOP Assignment #5
-- Due: 2025/5/12 23:59:59
-- Author: 111703003 廖經翔
-- Contact: 111703003@g.nccu.edu.tw
----
+# 2025 OOP Assignment #7
 
-## 2D Console Game (Part1)
+# 2D Console Game
+「蛇」麼都要吃
+## 遊戲玩法
+1.玩家控制自己的綠色蛇，與敵方的紅色蛇一起在地圖上行動。
+2.玩家輸入方向(a往左，d往右，w往上，s往下)，蛇會往指定方向移動。
+3.身體越長，移動速度越快。
+4.地圖上會隨機產生食物：  
+(1)蛇吃到食物後會變長(@是蛇頭，o是蛇身)。
+(2)每個食物都有保存期限(60步)，過期會自動消失(剩餘的步數小於等於20步，食物變成紅色；剩餘的步數大於20步，小於等於40步，食物變成紫色，剩餘步數大於40步，食物顏色為黃色)。
+(3)吃掉食物後，隨機生出1~3個食物。
+4.當發生以下狀況時，玩家蛇死亡，遊戲結束：
+(1)蛇撞到牆壁。
+(2)蛇咬到自己(撞到自己的身體)。
+(3)蛇撞到對方（玩家蛇與敵方蛇相撞，依碰撞狀況判斷是雙蛇同時死亡或單方死亡）。
+(4)場上所有食物都被吃光。
+5.敵方蛇死亡後，會在地圖上隨機復活。
 
-Obejctive: Building a basic structure of a game and practice Object-Oriented Design
+## UML類別圖
+![UML類別圖](UML圖.png)
 
-### Description
-
-In this assignment, you are required to complete the following:
-1. Complete the missing part with the `//TODO` comments.
-2. Setup the simple Model-View-Controller architecture.
-3. Create some GameObjects and player-controlled GameObject in Map
-
-### Expected Output
-
-
-
-https://github.com/user-attachments/assets/5e90f4cc-372d-4232-abac-67e397f0f73d
-
-### Compile and Run
-Before compiling the program, in **Project Folder**:
-```console
-mkdir build
-```
-```console
-cd build
-```
-
-Then in `build/`:
-```console
-cmake ..
-```
-
-To compile the program, in `build/`:
-```console
-make
-```
-
-To run the program, in `build/`:
-```console
-./exec
-```
-
-### Scoreing Criteria
-|Description|Score|
-|-----|-----|
-|Submit the assignment|20|
-|Able to compile|20|
-|Draw static GameObject correctly|20|
-|Draw dynamic GameObject correctly|10|
-|Implement IconFactory|10|
-|Implement GameObjectFactory|10|
-|Handling key input to control GameObjects|10|
-
-### Reminder
-
-1. The default include path is set to `include/`, any header file below `include` can be included directly.
-2. You can add new files for more features, but the required part noted by `//TODO` must be implemented.
-3. After finishing this assignment, you can start to think what games you can make with the architecture.
-
+## 遊戲流程圖
+![遊戲流程圖](遊戲流程圖.png)
